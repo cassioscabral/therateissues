@@ -22,3 +22,9 @@ accounts-ui
 accounts-github
 react
 service-configuration
+cosmos:browserify
+meteorhacks:npm
+
+
+npm-container
+izzilab:material-ui
