@@ -1,4 +1,5 @@
 {
     "upper-case" : "1.1.2",
-    "material-ui" : "0.12.1"
+    "material-ui" : "0.12.1",
+    "externalify": "0.1.0"
 }

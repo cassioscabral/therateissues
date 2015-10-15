@@ -1,4 +1,26 @@
+var {
+    AppCanvas,
+    AppBar,
+    Styles,
+    Avatar,
+    Tabs,
+    Tab,
+    IconButton,
+    LeftNav
+    } = MUI;
+var { ThemeManager, LightRawTheme } = Styles;
+
 App = React.createClass({
+
+    childContextTypes: {
+        muiTheme: React.PropTypes.object
+    },
+
+    getChildContext() {
+        return {
+            muiTheme: ThemeManager.getMuiTheme(LightRawTheme)
+        };
+    },
 
     // This mixin makes the getMeteorData method work
     mixins: [ReactMeteorData],
@@ -14,18 +36,19 @@ App = React.createClass({
 
     render() {
         return (
-            <div className="container">
-                <header>
-                    <h1>Rate issues</h1>
-
+            <AppCanvas>
+                <div className="top-menu">
+                    <AppBar
+                      title="Rate Issues"
+                      iconElementLeft={<IconButton iconClassName="material-icons">home</IconButton>}
+                      iconElementRight={<Avatar>U</Avatar>}
+                    />
                     <AccountsUIWrapper />
+                </div>
+                <div class="left-nav">
 
-                </header>
-
-                <main>
-
-                </main>
-            </div>
+                </div>
+            </AppCanvas>
         );
     }
 });

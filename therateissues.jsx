@@ -1,14 +1,16 @@
 if (Meteor.isClient) {
     Meteor.startup(function () {
 
-        Meteor.loginWithGithub({
-            requestPermissions: ['user', 'public_repo', 'gist']
-        }, function (err) {
-            if (err)
-            Session.set('errorMessage', err.reason || 'Unknown error');
-        });
+        // Meteor.loginWithGithub({
+        //     requestPermissions: ['user', 'public_repo', 'gist']
+        // }, function (err) {
+        //     if (err)
+        //     Session.set('errorMessage', err.reason || 'Unknown error');
+        // });
         // Use Meteor.startup to render the component after the page is ready
-        React.render(<App />, document.getElementById("render-target"));
+        // React.render(<App />, document.getElementById("render-target"));
+        injectTapEventPlugin();
+        React.render(<App/>, document.body);
     });
 }
 
