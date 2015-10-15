@@ -173,6 +173,9 @@
         }
       }
     },
+    "flexboxgrid": {
+      "version": "6.3.0"
+    },
     "material-ui": {
       "version": "0.12.1",
       "dependencies": {
